@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smoking Weed Simulator</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CRT Screen Shader Overlay -->
+  <div class="crt-overlay"></div>
+  <div class="vignette"></div>
+
+  <!-- Game Container -->
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- UI Overlay Hud -->
+    <div id="hud" class="hidden">
+      <!-- Friends Satisfaction Bar -->
+      <div id="satisfaction-panel">
+        <span class="hud-label">FRIENDS SATISFACTION</span>
+        <div class="bar-container">
+          <div id="satisfaction-bar" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Quick Toast Popup Alerts (Non-blocking) -->
+      <div id="toast-container"></div>
+
+      <!-- Checklist Notepad -->
+      <div id="task-notepad">
+        <div class="notepad-header">TASKS</div>
+        <ul id="task-list">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dialogue Box overlay -->
+    <div id="dialogue-box" class="hidden">
+      <div class="dialogue-header">
+        <span id="speaker-name">Vahe</span>
+      </div>
+      <div class="dialogue-content-wrapper">
+        <div id="dialogue-portrait"></div>
+        <div class="dialogue-body">
+          <p id="dialogue-text">"Hey man, finish up in there and come hang out in the zal!"</p>
+        </div>
+      </div>
+      <div id="dialogue-options">
+        <!-- Interactive options populated by JS -->
+      </div>
+      <div class="dialogue-footer">Click or Press 1-3 to select option</div>
+    </div>
+
+    <!-- Start / Main Menu Screen -->
+    <div id="start-screen" class="modal-overlay">
+      <div class="menu-card glassmorphism">
+        <h1 class="game-title glow-text">SMOKING WEED<br><span class="subtitle">SIMULATOR</span></h1>
+        
+        <div class="alert-box">
+          <p class="warning-tag">WARNING / NOTICE</p>
+          <p class="warning-text">Based on true events. Intended for smokers and fans of surreal narrative experiences.</p>
+        </div>
+
+        <div class="settings-box">
+          <div class="setting-item">
+            <span>GRAPHICS & PERFORMANCE</span>
+            <span class="setting-val neon-green">HIGH</span>
+          </div>
+          <div class="setting-hint">"For best performance & graphics, please get High."</div>
+        </div>
+
+        <button id="start-btn" class="neon-btn">START SIMULATION</button>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="modal-overlay hidden">
+      <div class="menu-card glassmorphism">
+        <h1 class="glow-text text-red">BAD TRIP</h1>
+        <p id="game-over-reason">You let your friends' satisfaction drop to zero, or you couldn't handle the corridor horrors.</p>
+        <button id="restart-btn" class="neon-btn btn-red">TRY AGAIN</button>
+      </div>
+    </div>
+
+    <!-- Game Complete Screen -->
+    <div id="game-complete-screen" class="modal-overlay hidden">
+      <div class="menu-card glassmorphism">
+        <h1 class="glow-text text-gold">THE END</h1>
+        <p>The labyrinth is cleared. The cycle is complete. You wake up on the couch, or did you?</p>
+        <button id="reload-btn" class="neon-btn btn-gold">REPLAY SIMULATION</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio and Game Logic scripts -->
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
