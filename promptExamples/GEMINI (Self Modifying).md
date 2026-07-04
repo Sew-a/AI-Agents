@@ -1,3 +1,10 @@
+---
+name: gemini-self-modifying
+description: >
+  Self-correcting rules engine pattern where the agent appends learned rules on mistakes. The agent reads all rules at session start and improves behavior over time. Triggers on "self-modifying prompt", "self-correcting rules", "learned rules engine", or agent mistakes detected by the user.
+allowed-tools: Read, Grep, Glob, Bash, Task, Write, Edit
+---
+
 # Agent Instructions
 
 Read this entire file before starting any task.

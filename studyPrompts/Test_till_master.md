@@ -1,6 +1,13 @@
-# CV Analysis Prompt for LLM
+---
+name: test-till-master
+description: >
+  Ask any LLM to quiz you with 10 increasingly difficult questions on a topic you just studied. After each answer, get a score and explanation of what you got wrong. Triggers on "test me on", "quiz me", "mastery test".
+allowed-tools: none
+---
 
-> Share this prompt with any LLM (ChatGPT, Claude, Gemini, etc.) and paste your CV at the bottom.
+# Test Till Master
+
+> Share this prompt with any LLM (ChatGPT, Claude, Gemini, etc.) after studying any topic.
 
 ---
 

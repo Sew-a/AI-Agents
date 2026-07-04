@@ -1,3 +1,10 @@
+---
+name: cv-analysis
+description: >
+  Share with any LLM to get FAANG-level CV analysis. Scores dimensions (impact, craft, scale, strategy), rewrites bullets in XYZ format, and produces a hiring verdict. Triggers on "analyze my CV", "CV review", "resume critique", or paste your CV for analysis.
+allowed-tools: none
+---
+
 # CV Analysis Prompt for LLM
 > Share this prompt with any LLM (ChatGPT, Claude, Gemini, etc.) and paste your CV at the bottom.
 

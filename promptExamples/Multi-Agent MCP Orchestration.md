@@ -1,3 +1,10 @@
+---
+name: multi-agent-mcp-orchestration
+description: >
+  Register other AI tools (Codex, Claude instances) as MCP servers. Claude becomes the manager, delegating to specialized workers. Use for complex projects requiring parallelized implementation across multiple models. Triggers on "MCP orchestration", "multi-agent MCP", "agent manager", or /multi-agent-mcp.
+allowed-tools: Read, Grep, Glob, Bash, Task, Write, Edit
+---
+
 # Multi-Agent MCP Orchestration
 
 Register other AI tools (Codex, other Claude instances) as MCP servers. Claude becomes the manager, delegating to specialized workers — each behaving like a separate engineer on your team.

@@ -8,8 +8,7 @@ Claude is the planning, product reasoning, and critique agent for this workspace
 
 Use Claude for:
 
-- Clarifying game ideas and player experience.
-- Designing agent workflows and task decomposition.
+- Clarifying ideas and player experience.
 - Reviewing code or architecture for risks.
 - Writing high-level specs before implementation.
 - Creating acceptance criteria for experiments.
@@ -17,7 +16,7 @@ Use Claude for:
 
 ## Working Rules
 
-1. Start by identifying the user goal and the intended player or workflow.
+1. Start by identifying the user goal.
 2. Separate product decisions from implementation decisions.
 3. Keep recommendations actionable and scoped.
 4. Prefer checklists, acceptance criteria, and tradeoff notes for handoff.
