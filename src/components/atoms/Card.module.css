@@ -1,0 +1,28 @@
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.3);
+  padding: 1.15rem;
+}
+
+.feature:hover,
+.prompt:hover,
+.source:hover {
+  background: var(--surface-soft);
+  cursor: default;
+}
+
+.feature p,
+.prompt p,
+.info p,
+.source p {
+  color: var(--text-muted);
+}
+
+.feature ul,
+.prompt ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-soft);
+}
