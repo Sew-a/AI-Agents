@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { dailyPrompts } from '@/data/dailyPrompts';
 import { DailyPromptCard } from '@/components/molecules/DailyPromptCard';
+
+export const metadata: Metadata = {
+  title: 'Daily Life Prompts',
+  description:
+    'Ready-to-use AI prompts for planning, learning, writing, decision-making, document summarization, and interview practice. Short enough to use immediately.',
+};
 
 export default function DailyPage() {
   return (

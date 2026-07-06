@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import { agentWorkflows } from '@/data/agentWorkflows';
 import { agentComponents } from '@/data/agentComponents';
 import { AgentWorkflowCard } from '@/components/molecules/AgentWorkflowCard';
+
+export const metadata: Metadata = {
+  title: 'AI Agents',
+  description:
+    'Beyond text generation — agents that plan, use tools, and remember. Learn the three pillars of agent systems: planning, tools, and memory.',
+};
 
 export default function AgentsPage() {
   return (

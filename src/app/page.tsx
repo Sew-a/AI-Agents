@@ -1,17 +1,32 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { homeFeatures } from '@/data/homeFeatures';
+import { Hero } from '@/components/organisms/Hero';
+
+export const metadata: Metadata = {
+  title: 'AI Agents Prompts | Practical LLM Guide',
+  description:
+    'A curated knowledge hub for prompt engineering, AI agents, RAG, reusable patterns, and everyday examples you can copy into ChatGPT, Claude, Gemini, or any assistant.',
+  openGraph: {
+    title: 'AI Agents Prompts | Practical LLM Guide',
+    description:
+      'A curated knowledge hub for prompt engineering, AI agents, RAG, reusable patterns, and everyday examples.',
+    images: [{ url: '/hero.avif', width: 1200, height: 630, alt: 'AI Agents Prompts' }],
+  },
+};
+
+const openSourceRepos = [
+  { name: 'n8n', desc: 'Workflow automation for technical people. Connect any app, run any action.', url: 'https://github.com/n8n-io/n8n', stars: '54k+' },
+  { name: 'Appflowy', desc: 'Open-source Notion alternative. AI-native workspace with collaborative docs.', url: 'https://github.com/AppFlowy-IO/AppFlowy', stars: '60k+' },
+  { name: 'Ollama', desc: 'Run LLMs locally. Llama 3, Mistral, Gemma, and 100+ models with one command.', url: 'https://github.com/ollama/ollama', stars: '130k+' },
+  { name: 'Fooocus', desc: 'AI image generation with simplicity. Offline, free, and prompt-focused.', url: 'https://github.com/lllyasviel/Fooocus', stars: '44k+' },
+  { name: 'Whisper', desc: 'OpenAI\'s general-purpose speech recognition model. Multilingual, robust.', url: 'https://github.com/openai/whisper', stars: '78k+' },
+];
 
 export default function HomePage() {
   return (
     <>
-      <div className="page-header">
-        <p className="eyebrow">Practical AI guide</p>
-        <h2>Use LLMs like a daily thinking system, not just a chat box.</h2>
-        <p className="subtitle">
-          A curated knowledge hub for prompt engineering, AI agents, RAG, reusable patterns,
-          and everyday examples you can copy into ChatGPT, Claude, Gemini, or any assistant.
-        </p>
-      </div>
+      <Hero />
 
       <div className="feature-grid">
         {homeFeatures.map((feature, i) => (
@@ -27,6 +42,28 @@ export default function HomePage() {
           </Link>
         ))}
       </div>
+
+      <section className="site-summary">
+        <p className="eyebrow">Open Source AI Tools</p>
+        <h3>Self-host the best open-source AI infrastructure.</h3>
+        <p className="subtitle">
+          Production-ready repos for automation, document collaboration, local LLMs,
+          image generation, and speech recognition — all free to self-host.
+        </p>
+        <div className="content-grid">
+          {openSourceRepos.map((repo) => (
+            <a key={repo.name} href={repo.url} target="_blank" rel="noopener noreferrer" className="feature-card-link">
+              <article className="card feature-card">
+                <div className="card-header">
+                  <span className="badge" style={{ fontSize: '0.85rem', textTransform: 'lowercase', fontFamily: 'var(--font-mono)' }}>{repo.name}</span>
+                  <span className="tag">{repo.stars} stars</span>
+                </div>
+                <p className="card-body">{repo.desc}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
 
       <section className="site-summary">
         <p className="eyebrow">What you'll find here</p>

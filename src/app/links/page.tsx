@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import { links } from '@/data/links';
+
+export const metadata: Metadata = {
+  title: 'Links & Sources',
+  description:
+    'Curated references to DAIR.AI\'s Prompt Engineering Guide, prompts.chat, Lil\'Log, and other essential AI and prompt engineering resources.',
+};
 
 export default function LinksPage() {
   return (

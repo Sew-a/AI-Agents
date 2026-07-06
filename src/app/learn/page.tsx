@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Learning Path',
+  description:
+    'A structured 6-step path from LLM basics to context engineering, with common pitfalls and success metrics for mastering prompt engineering and AI agents.',
+};
 
 const pathSteps = [
   { step: 1, title: 'LLM Basics', desc: 'Understand prompt elements, temperature, and top-p settings.', path: '/basics' },

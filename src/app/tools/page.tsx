@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { freeAgentsTools, toolFaqItems } from '@/data/freeAgentsTools';
 import { CopyButton } from '@/components/molecules/CopyButton';
+
+export const metadata: Metadata = {
+  title: 'Free AI Tools',
+  description:
+    'Nine free open-source AI coding agents. Compare features, install commands, and self-host with zero ongoing cost. Includes n8n, Appflowy, Ollama, Fooocus, and Whisper.',
+};
 
 export default function ToolsPage() {
   return (

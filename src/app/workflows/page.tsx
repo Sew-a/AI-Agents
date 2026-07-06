@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { agentWorkflows } from '@/data/agentWorkflows';
 import { AgentWorkflowCard } from '@/components/molecules/AgentWorkflowCard';
+
+export const metadata: Metadata = {
+  title: 'Agent Workflows',
+  description:
+    'Six practical workflow patterns: prompt contracts, planner-builder-reviewer, agent chatrooms, self-modifying rules, stochastic consensus, and verification loops.',
+};
 
 export default function WorkflowsPage() {
   return (

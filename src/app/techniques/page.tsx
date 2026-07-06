@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { techniques } from '@/data/techniques';
 import { TechniqueCard } from '@/components/molecules/TechniqueCard';
+
+export const metadata: Metadata = {
+  title: 'Prompt Techniques',
+  description:
+    'Nine essential prompt engineering patterns: zero-shot, few-shot, chain-of-thought, meta prompting, self-consistency, tree of thoughts, prompt chaining, ReAct, and reflexion — each with copyable examples.',
+};
 
 export default function TechniquesPage() {
   return (

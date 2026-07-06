@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 
@@ -19,6 +20,17 @@ export function Hero() {
             Open prompt library
           </Link>
         </div>
+      </div>
+      <div className={styles.heroVisual}>
+        <div className={styles.glow} />
+        <Image
+          src="/hero.avif"
+          alt="AI Agents and Prompt Engineering"
+          width={600}
+          height={420}
+          className={styles.heroImage}
+          priority
+        />
       </div>
     </div>
   );

@@ -56,7 +56,7 @@ export interface NavLink {
 export type NavItem = NavSection | NavLink;
 
 export interface ThemeContextType {
-  theme: 'light' | 'dark';
+  theme: 'dark';
   toggleTheme: () => void;
 }
 

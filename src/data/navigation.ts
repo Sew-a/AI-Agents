@@ -14,5 +14,5 @@ export const navigationItems: NavItem[] = [
   { type: 'section', label: 'Resources' },
   { type: 'link', label: 'Free AI Tools', path: '/tools' },
   { type: 'link', label: 'Learning Path', path: '/learn' },
-  { type: 'link', label: 'Links + Thanks', path: '/links' },
+  { type: 'link', label: 'Links', path: '/links' },
 ];

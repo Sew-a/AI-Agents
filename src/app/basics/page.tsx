@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import { promptElements } from '@/data/promptElements';
+
+export const metadata: Metadata = {
+  title: 'Prompt Basics',
+  description:
+    'Learn the four elements of a prompt: instruction, context, input data, and output format. Understand key settings like temperature and top-p for better LLM outputs.',
+};
 
 export default function BasicsPage() {
   return (
