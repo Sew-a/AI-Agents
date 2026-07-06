@@ -1,0 +1,11 @@
+name = "ai-agents"
+main = ".vercel/output/static/_worker.js"
+compatibility_date = "2024-04-03"
+compatibility_flags = [ "nodejs_compat" ]
+
+[assets]
+directory = ".vercel/output/static"
+
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "ai-agents"
