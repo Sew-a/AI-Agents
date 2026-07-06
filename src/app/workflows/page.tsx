@@ -1,24 +1,7 @@
-'use client';
-
-import { useState, useMemo } from 'react';
 import { agentWorkflows } from '@/data/agentWorkflows';
-import { SearchBar } from '@/components/molecules/SearchBar';
 import { AgentWorkflowCard } from '@/components/molecules/AgentWorkflowCard';
 
 export default function WorkflowsPage() {
-  const [search, setSearch] = useState('');
-
-  const filtered = useMemo(() => {
-    if (!search.trim()) return agentWorkflows;
-    const q = search.toLowerCase();
-    return agentWorkflows.filter(
-      (w) =>
-        w.title.toLowerCase().includes(q) ||
-        w.summary.toLowerCase().includes(q) ||
-        w.steps.some((s) => s.toLowerCase().includes(q))
-    );
-  }, [search]);
-
   return (
     <>
       <p className="eyebrow">Agent Workflows</p>
@@ -50,20 +33,10 @@ export default function WorkflowsPage() {
         </article>
       </div>
 
-      <SearchBar
-        value={search}
-        onChange={setSearch}
-        placeholder="Search workflow patterns..."
-      />
       <div className="content-grid">
-        {filtered.map((workflow, index) => (
+        {agentWorkflows.map((workflow, index) => (
           <AgentWorkflowCard key={index} workflow={workflow} />
         ))}
-        {filtered.length === 0 && (
-          <p style={{ color: 'var(--text-muted)', gridColumn: '1 / -1' }}>
-            No workflows match your search.
-          </p>
-        )}
       </div>
     </>
   );

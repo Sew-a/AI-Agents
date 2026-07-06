@@ -1,25 +1,7 @@
-'use client';
-
-import { useState, useMemo } from 'react';
 import { freeAgentsTools, toolFaqItems } from '@/data/freeAgentsTools';
-import { SearchBar } from '@/components/molecules/SearchBar';
 import { CopyButton } from '@/components/molecules/CopyButton';
 
 export default function ToolsPage() {
-  const [search, setSearch] = useState('');
-
-  const filtered = useMemo(() => {
-    if (!search.trim()) return freeAgentsTools;
-    const q = search.toLowerCase();
-    return freeAgentsTools.filter(
-      (t) =>
-        t.name.toLowerCase().includes(q) ||
-        t.description.toLowerCase().includes(q) ||
-        t.bestFor.toLowerCase().includes(q) ||
-        t.type.toLowerCase().includes(q)
-    );
-  }, [search]);
-
   return (
     <>
       <p className="eyebrow">Free AI Tools</p>
@@ -44,7 +26,7 @@ export default function ToolsPage() {
             </tr>
           </thead>
           <tbody>
-            {filtered.map((tool, i) => (
+            {freeAgentsTools.map((tool, i) => (
               <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
                 <td style={{ padding: '0.5rem', fontWeight: 600 }}>{tool.name}</td>
                 <td style={{ padding: '0.5rem' }}>{tool.type}</td>
@@ -58,14 +40,8 @@ export default function ToolsPage() {
         </table>
       </div>
 
-      <SearchBar
-        value={search}
-        onChange={setSearch}
-        placeholder="Search tools..."
-      />
-
       <div className="content-grid" style={{ marginTop: '1.5rem' }}>
-        {filtered.map((tool, i) => (
+        {freeAgentsTools.map((tool, i) => (
           <article key={i} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <div className="card-header">
               <span className="badge">{tool.name}</span>
@@ -86,11 +62,6 @@ export default function ToolsPage() {
             )}
           </article>
         ))}
-        {filtered.length === 0 && (
-          <p style={{ color: 'var(--text-muted)', gridColumn: '1 / -1' }}>
-            No tools match your search.
-          </p>
-        )}
       </div>
 
       <h3 style={{ marginTop: '2rem' }}>FAQ</h3>

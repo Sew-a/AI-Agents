@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "ai-agents",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "next dev",
     "pages:build": "npx @cloudflare/next-on-pages",
     "start": "next start",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
+    "lint": "eslint"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.1",
